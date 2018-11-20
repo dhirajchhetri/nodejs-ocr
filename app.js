@@ -1,15 +1,12 @@
 'use strict'
 
-const argv = require('yargs')
-  .alias('i', 'imgPath')
-  .argv
-
+const argv = require('yargs').alias('i', 'imgPath').argv
 const fs = require('fs-extra')
 const path = require('path')
 const image = path.resolve(__dirname, argv.imgPath)
 
-const Tesseract = require('tesseract.js')
-Tesseract.recognize(image)
+require('tesseract.js')
+  .recognize(image)
   .progress(info => {
     console.log(info)
   })
