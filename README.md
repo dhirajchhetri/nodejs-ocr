@@ -1,4 +1,4 @@
-# Node.js image OCR CLI
+# Node.js OCR
 
 ## Installation:
 
